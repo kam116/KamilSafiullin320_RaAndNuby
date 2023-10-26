@@ -12,33 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using KamilSafiullin320_RaAndNuby.DB;
 
 namespace KamilSafiullin320_RaAndNuby.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainMenuPage.xaml
+    /// Логика взаимодействия для InformationPage.xaml
     /// </summary>
-    public partial class MainMenuPage : Page
+    public partial class InformationPage : Page
     {
-        public MainMenuPage()
+        public InformationPage()
         {
             InitializeComponent();
-        }
-
-        private void AddPetPhotoBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AddPetBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ListBtn_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
