@@ -5,11 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="9e4f5ca6b9d7440fb35ddbc73901efe3" Name="Diagram1">
-        <EntityTypeShape EntityType="RaNuby_320_KamilModel.Pet" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="RaNuby_320_KamilModel.Pet_name" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="RaNuby_320_KamilModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RaNuby_320_KamilModel.User" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <AssociationConnector Association="RaNuby_320_KamilModel.FK_Pet_Pet_name" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RaNuby_320_KamilModel.Pet" Width="1.5" PointX="3" PointY="0.875" />
+        <EntityTypeShape EntityType="RaNuby_320_KamilModel.Pet_name" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="RaNuby_320_KamilModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RaNuby_320_KamilModel.User" Width="1.5" PointX="2.75" PointY="3.75" />
+        <AssociationConnector Association="RaNuby_320_KamilModel.FK_Pet_Pet_name" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

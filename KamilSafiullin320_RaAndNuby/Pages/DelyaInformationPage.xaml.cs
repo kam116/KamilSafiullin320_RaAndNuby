@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace KamilSafiullin320_RaAndNuby.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для InformationPage.xaml
+    /// Логика взаимодействия для DelyaInformationPage.xaml
     /// </summary>
-    public partial class InformationPage : Page
+    public partial class DelyaInformationPage : Page
     {
-        public InformationPage()
+        public DelyaInformationPage()
         {
             InitializeComponent();
         }
