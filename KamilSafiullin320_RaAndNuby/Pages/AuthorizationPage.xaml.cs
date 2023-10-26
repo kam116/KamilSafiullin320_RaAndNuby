@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using KamilSafiullin320_RaAndNuby.DB;
 
 namespace KamilSafiullin320_RaAndNuby.Pages
 {
@@ -20,6 +21,7 @@ namespace KamilSafiullin320_RaAndNuby.Pages
     /// </summary>
     public partial class AuthorizationPage : Page
     {
+        public static List<User> users { get; set; }
         public AuthorizationPage()
         {
             InitializeComponent();
@@ -27,7 +29,27 @@ namespace KamilSafiullin320_RaAndNuby.Pages
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
+            string login = loginTb.Text.Trim();
+            string password = passwordPb.Password.Trim();
 
+            users = new List<User>(DbConnection.RaNuby_320_KamilEntities.User.ToList());
+            User currentUser = users.FirstOrDefault(i => i.Login == login && i.Password == password);
+            if (currentUser != null && currentUser.Id_user == 1)
+            {
+                MessageBox.Show($"Успешно, {currentUser.Name}!");
+                NavigationService.Navigate(new MainMenuPage());
+            }
+            else if (currentUser != null && currentUser.Id_user == 2)
+            {
+                MessageBox.Show($"Успешно, {currentUser.Name}!");
+                NavigationService.Navigate(new MainMenuPage());
+            }
+            else
+            {
+                MessageBox.Show("Повторите попытку!");
+                loginTb.Text = string.Empty;
+                passwordPb.Password = string.Empty;
+            }
         }
     }
 }
