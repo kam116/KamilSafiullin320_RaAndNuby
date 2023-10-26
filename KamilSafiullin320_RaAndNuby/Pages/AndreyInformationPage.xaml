@@ -9,6 +9,104 @@
       Title="AndreyInformationPage">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Информация"
+               Grid.Row="0"
+               Grid.Column="1"
+               Grid.ColumnSpan="3"
+               TextAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="20"
+               FontWeight="DemiBold"/>
+
+        <ListView Grid.Column="1"
+              Grid.ColumnSpan="3"
+              Grid.Row="1"
+              Grid.RowSpan="5"
+              x:Name="PetInfoLv"
+              ItemsSource="{Binding pets}">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Кличка">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Pet_name.Name}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Описание">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Description}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Фото">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Width="200" Source="{Binding Photo}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <TextBlock Grid.Column="0"
+                   Grid.Row="7"
+                   Text="Сортировка:"
+                   FontSize="20"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   TextAlignment="Center"/>
+        <ComboBox x:Name="SortCb"
+                  Grid.Column="1"
+                  Grid.Row="7"
+                  HorizontalContentAlignment="Center"
+                  VerticalContentAlignment="Center"
+                  Margin="10">
+        </ComboBox>
+
+        <Button x:Name="BackBtn"
+                Grid.Column="5"
+                Grid.Row="8"
+                Content="Вернуться назад"
+                FontSize="15"
+                Margin="10" Click="BackBtn_Click"/>
+
+        <TextBlock Grid.Column="3"
+                   Grid.Row="7"
+                   Text="Поиск:"
+                   FontSize="20"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"/>
+        <TextBox x:Name="SearchTb"
+                 Grid.Column="4"
+                 Grid.Row="7"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Margin="10"/>
     </Grid>
 </Page>

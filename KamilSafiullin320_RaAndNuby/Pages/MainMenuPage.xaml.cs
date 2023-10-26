@@ -25,6 +25,7 @@ namespace KamilSafiullin320_RaAndNuby.Pages
     public partial class MainMenuPage : Page
     {
         public static DB.Pet pet = new DB.Pet();
+        public static DB.User users { get; set; }
         public MainMenuPage()
         {
             InitializeComponent();
